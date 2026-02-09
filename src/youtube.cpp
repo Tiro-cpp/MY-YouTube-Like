@@ -5,7 +5,7 @@
 
 
 
-std::shared_ptr<Chanel> youtube::getChanel(const std::string& name) const {
+std::shared_ptr<Chanel> youtube::getChanel(const std::string& name) const{
     for(size_t i{}; i < channel.size(); ++i){
         if(channel[i]->GetName() == name){
             return channel[i];

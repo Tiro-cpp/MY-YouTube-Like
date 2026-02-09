@@ -11,6 +11,6 @@ class User: public Observer {
     private:
         std::string Name;
     public: 
-        User(std::string n) : Name(std::move(n)) {}
+        User(std::string n): Name(std::move(n)) {}
         virtual void Notify(const std::string& def) override;
 };

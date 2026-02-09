@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Chanel.hpp"
 
-void Chanel::NotifyAll(const std::string& des)  {
-    for(size_t i{}; i < subscribers.size(); ) {
+void Chanel::NotifyAll(const std::string& des) {
+    for(size_t i{}; i < subscribers.size();) {
         if(auto sub = subscribers[i].lock()) {
             sub->Notify(des);
             ++i;
@@ -18,10 +18,9 @@ void Chanel::getVideos() const {
         videos[i]->type();
         videos[i]->getDescription();
     }
-
 }
 
-void Chanel::AddVideo(VideoCreator& creator, const std::string& des ) {
+void Chanel::AddVideo(VideoCreator& creator, const std::string& des) {
     auto vid = creator.createVideo(des);
     videos.push_back(std::move(vid));   
     NotifyAll(des);

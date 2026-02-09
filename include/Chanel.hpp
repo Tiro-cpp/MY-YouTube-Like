@@ -14,12 +14,12 @@ class Chanel {
        
 
     public:
-        Chanel(const std::string& n): Name{std::move(n)} {}
+        Chanel(const std::string& n): Name{ std::move(n) } {}
         ~Chanel() = default;
 
         void NotifyAll(const std::string& des);
         void getVideos() const;
-        std::string GetName()const;
+        std::string GetName() const;
 
         void AddVideo(VideoCreator& creator, const std::string& des);
         void AddSubscriber(std::weak_ptr<User> user);

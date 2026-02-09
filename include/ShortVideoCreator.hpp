@@ -6,5 +6,5 @@
 
 class ShortVideoCreator: public VideoCreator {
     public:
-        virtual std::unique_ptr<Video> createVideo(const std::string& description) override ;
+        virtual std::unique_ptr<Video> createVideo(const std::string& description) override;
 };
